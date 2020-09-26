@@ -1,6 +1,6 @@
 # Arduino
 
-- Iused `ESP32` for this project
+- I used `ESP32` for this project
 
 - set your ssid and password in these lines:
 
