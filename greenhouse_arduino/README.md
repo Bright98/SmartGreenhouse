@@ -4,7 +4,8 @@
 
 - set your ssid and password in these lines:
 
-> const char *ssid = "";
-> const char *password = "";
+> const char ssid = "";
+
+> const char password = "";
 
 now upload on your board
