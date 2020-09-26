@@ -1,0 +1,88 @@
+$susy: (
+  columns: $columns,
+  gutters: $gutters,
+  flow: $direction,
+);
+@mixin make-container($media-value) {
+  .container {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  @each $i, $width in $media-value {
+    @include susy-media($i) {
+      .container {
+        width: $width;
+      }
+    }
+  }
+}
+@mixin make-row() {
+  .row {
+    @include full();
+    display: block;
+    padding: 0 10px 0 6px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+  }
+}
+@mixin make-columns($media-name) {
+  div[class*="col-"] {
+    @include post(0);
+    // height: 100%;
+  }
+  @for $num from 1 through $columns {
+    .col-xs-#{$num} {
+      @include span($num);
+    }
+    // {flex-basis: ($num / $columns) * 100%;}
+  }
+  @for $num from 1 through ($columns)-1 {
+    .col-xs-pull-#{$num} {
+      right: span($num);
+    }
+  }
+  @for $num from 1 through ($columns)-1 {
+    .col-xs-push-#{$num} {
+      left: span($num);
+    }
+  }
+  @for $num from 1 through ($columns)-1 {
+    .col-xs-offset-#{$num} {
+      margin-left: span($num);
+    }
+  }
+
+  @each $name, $width in $media-name {
+    @include susy-media($width) {
+      @for $num from 1 through $columns {
+        .col-#{$name}-#{$num} {
+          @include span($num);
+        }
+        // {flex-basis: ($num / $columns) * 100%;}
+      }
+      @for $num from 1 through ($columns)-1 {
+        .col-#{$name}-pull-#{$num} {
+          right: span($num);
+        }
+      }
+      @for $num from 1 through ($columns)-1 {
+        .col-#{$name}-push-#{$num} {
+          left: span($num);
+        }
+      }
+      @for $num from 1 through ($columns)-1 {
+        .col-#{$name}-offset-#{$num} {
+          margin-left: span($num);
+        }
+      }
+    }
+  }
+}
+@mixin make-grid() {
+  @include make-container($media-name);
+  @include make-row();
+  @include make-columns($media-name);
+}

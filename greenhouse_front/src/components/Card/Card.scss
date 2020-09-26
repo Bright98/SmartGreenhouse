@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  flex: 1;
+  margin: 70px;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: $colonial_white;
+  @include susy-media(300px 800px) {
+    margin: 30px;
+  }
+
+  &__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+}

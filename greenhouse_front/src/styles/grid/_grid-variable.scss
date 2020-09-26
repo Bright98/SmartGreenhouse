@@ -1,0 +1,18 @@
+$columns: 12;
+$gutters: 0;
+$direction: rtl;
+
+$desktop-width: 1024px;
+$tablet-width: 480px;
+$mobile-width: 320px;
+
+$desktop: 1023px;
+$tablet: 480px;
+$mobile: 320px;
+
+$small:"sm";
+$medium: "md";
+$large: "lg";
+
+$media-name: ($small: $mobile-width, $medium: $tablet-width, $large: $desktop-width);
+$media-value: ($mobile-width: $mobile, $tablet-width: $tablet, $desktop-width: $desktop);

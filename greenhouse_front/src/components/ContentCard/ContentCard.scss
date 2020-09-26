@@ -1,0 +1,58 @@
+.contentCard {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+    &__image {
+      position: relative;
+
+      &__image1 {
+        width: 80px;
+      }
+      &__image2 {
+        width: 40px;
+        position: absolute;
+      }
+    }
+    & > span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 800;
+      font-size: 35px;
+      padding: 0 30px;
+      color: $laser;
+    }
+    @include susy-media(300px 800px) {
+      & > span {
+        font-size: 28px;
+        padding: 0 15px;
+      }
+    }
+  }
+  &__number {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    & > span {
+      color: $tundora;
+    }
+    & > span:first-child {
+      font-weight: $bold;
+      font-size: 50px;
+    }
+    & > span:last-child {
+      font-weight: 400;
+      font-size: 20px;
+      margin: 0 10px;
+    }
+  }
+}

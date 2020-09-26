@@ -1,0 +1,168 @@
+.homeContent {
+  height: 100vh;
+  padding: 0 90px;
+  display: flex;
+  flex-direction: column;
+  @include susy-media(300px 800px) {
+    height: auto;
+    padding: 0;
+    align-items: center;
+  }
+
+  &__row {
+    height: 100%;
+
+    &__humidity {
+      height: 100%;
+      display: flex;
+
+      & .contentCard {
+        & .contentCard__title__image__image2 {
+          opacity: 0;
+          left: 0;
+          transition: opacity 0.5s, left 1s;
+        }
+
+        &:hover {
+          & .contentCard__title__image__image2 {
+            opacity: 0.9;
+            left: 45px;
+          }
+        }
+
+        & .contentCard__number {
+          & > svg {
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+
+    &__temperature {
+      height: 100%;
+      display: flex;
+
+      & .contentCard {
+        & .contentCard__title__image__image2 {
+          left: 0;
+          transform: rotate(0);
+          transition: transform 0.7s;
+        }
+
+        &:hover {
+          & .contentCard__title__image__image2 {
+            transform: rotate(60deg);
+          }
+        }
+        & .contentCard__number {
+          & > span:last-child {
+            font-size: 35px;
+          }
+        }
+      }
+    }
+
+    &__watering {
+      height: 100%;
+      display: flex;
+
+      & .contentCard {
+        & .contentCard__title__image__image1 {
+          transform: rotate(0);
+          position: relative;
+          bottom: 0;
+          transition: bottom 0.5s, transform 1s;
+        }
+        & .contentCard__title__image__image2 {
+          right: 50px;
+          opacity: 0;
+          top: 50px;
+          transition: opacity 0.7s, top 1s;
+          transition-delay: 0.4s;
+        }
+
+        &:hover {
+          & .contentCard__title__image__image1 {
+            transform: rotate(-60deg);
+            bottom: 10px;
+          }
+          & .contentCard__title__image__image2 {
+            opacity: 1;
+            top: 70px;
+          }
+        }
+
+        & .contentCard__number {
+          flex-direction: column;
+          & > span:first-child {
+            font-weight: 500;
+            font-size: 20px;
+          }
+          & > span:last-child {
+            font-size: 17px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    &__fan {
+      height: 100%;
+      display: flex;
+
+      & .contentCard {
+        & .contentCard__title__image__image1 {
+          width: 60px;
+          position: relative;
+          right: 15px;
+        }
+        & .contentCard__title__image__image2 {
+          width: 30px;
+          opacity: 0;
+          left: 0;
+          transition: opacity 0.5s, left 1s;
+        }
+
+        &:hover {
+          & .contentCard__title__image__image2 {
+            opacity: 1;
+            left: 40px;
+          }
+        }
+
+        & .contentCard__number {
+          flex-direction: column;
+          & > span:first-child {
+            font-weight: 500;
+            font-size: 20px;
+          }
+          & > span:last-child {
+            font-size: 17px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    &__button {
+      & > button {
+        background-color: transparent;
+        border: 2px solid $laser;
+        border-radius: 30px;
+        padding: 10px 30px;
+        margin: 25px 0;
+        font-family: $font_family;
+        font-weight: 600;
+        font-size: 18px;
+        color: $laser;
+        outline: 0;
+        cursor: pointer;
+        transition: background-color 0.5s, color 0.5s;
+        &:hover {
+          background-color: $laser;
+          color: $dove_gray;
+        }
+      }
+    }
+  }
+}

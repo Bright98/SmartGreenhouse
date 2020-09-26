@@ -1,0 +1,17 @@
+// styles
+@import "./styles/grid/grid.scss";
+@import "./styles/font/font.scss";
+@import "./styles/variable/color.scss";
+@import "./styles/variable/font.scss";
+
+// index
+@import "./index.scss";
+
+// pages
+@import "./pages/Home/Home.scss";
+
+// components
+@import "./components/GetStart/GetStart.scss";
+@import "./components/HomeContent/HomeContent.scss";
+@import "./components/ContentCard/ContentCard.scss";
+@import "./components/Card/Card.scss";
