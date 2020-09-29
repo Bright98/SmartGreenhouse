@@ -1,5 +1,4 @@
 # SmartGreenhouse
 
-<img src="greenhouse_front/image/greenhouse.svg" width="64"/><span> this project control temperature and humidity of your plants far away
-and you can watering and turn on/off the fan of your greenhouse to have better plants
-</span>
+<img src="greenhouse_front/image/greenhouse.svg" width="64"/><span> This project remotely controls the temperature and humidity of your plants...
+You can also irrigate your greenhouse to have better plants</span>
